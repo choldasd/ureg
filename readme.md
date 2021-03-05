@@ -7,14 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About User Managment
+## About User Registration Module
 
 To run application user below instruction.
  - Rename .env.example file to .env file
- - Create Database - ums
+ - Add MAIL_USERNAME = your_gmail  and MAIL_PASSWORD = your_gmail_password. in enc
+ - Please enable less secure app in gmail account.
+ - Please enable less secure app in gmail account.
+ - SmartStreet API Credentials are added in SmartStreetService file.
+ - Create Database - ureg
+ - Run command - php artisan key:generate
  - Run command - php artisan migrate
  - Run command - php artisan db:seed --class=UsersTableSeeder
- - Run command - php artisan db:seed --class=AdminsTableSeeder
  - Run command - php artisan serve
 
 ## Credentials
@@ -27,31 +31,20 @@ password - user@123
 username - rahul@gmail.com
 password - user@123
 
-- Disable Status - 
-username - amol@gmail.com
-password - user@123
-
-username - james@gmail.com
-password - user@123
-
-Admin credential 
-- Admin - 
 username - johnad@gmail.com
 password - admin@123
 
 ## Points Covered
 Below points are covered in this application
 
-- Login
-- Authentication of user
-- CRUD on Users
-- Middleware (to check user status)
-CheckStatus middleware to check the status of users.
+ - Create a user registration module with the following fields
+Name,Email,Phone,Street Address (While typing, it should auto-suggest the address using smarty street  API.)
+City,State,Zip
 
-- Request Validation
-StoreUser and UpdateUser Validation.
-
-- For listing of users use DataTable js package in which you must load data using ajax.
+- Once the user has registered the following things should happen
+    1. Send a welcome email to user email id (use Laravel Events)
+    2. Using smarty street API Find the county name of that address.
+    3. Save the county name into the user table
 
 ## License
 
