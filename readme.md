@@ -24,15 +24,9 @@ To run application user below instruction.
 ## Credentials
 
 User Credentail 
-- Active Status - 
-username - john@gmail.com
-password - user@123
-
-username - rahul@gmail.com
-password - user@123
-
-username - johnad@gmail.com
-password - admin@123
+- username - john@gmail.com password - user@123
+- username - rahul@gmail.com password - user@123
+- username - johnad@gmail.com password - admin@123
 
 ## Points Covered
 Below points are covered in this application
