@@ -85,7 +85,7 @@ class SmartStreetService {
         $lookup->setZipcode($zipcode);
 
         $lookup->setMaxCandidates(3);
-        //$lookup->setMatchStrategy("invalid");
+        $lookup->setMatchStrategy("invalid");
 
         try {
             $client->sendLookup($lookup);
